@@ -30,17 +30,28 @@ mod src/truffle-config.js
 module.exports = {
   networks: {
     development: {
-      host: "ganche",
+      host: "ganache",
       port: 8545,
       network_id: 1234
     },
     test: {
-      host: "ganche",
+      host: "ganache",
       port: 8545,
       network_id: 1234
+    }
+  },
+  compilers: {
+    solc: {
+      version: "0.5.2"
     }
   }
 };
 ```
 
 `docker-compose run truffle migrate --network development`
+
+## notice
+
+### import openzeppelin node
+
+`/home/node/.npm-global/lib/node_modules/openzeppelin-solidity`
