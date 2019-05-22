@@ -10,4 +10,4 @@ ENV NETWORKID 1234
 
 EXPOSE 8545
 
-ENTRYPOINT ["sh", "-c", "ganache-cli --host=0.0.0.0 --db=${DATADIR} --mnemonic=\"${MNEMONIC}\" --networkId=${NETWORKID}"]
+ENTRYPOINT ["sh", "-c", "ganache-cli -v --host=0.0.0.0 --db=${DATADIR} --mnemonic=\"${MNEMONIC}\" --networkId=${NETWORKID}"]

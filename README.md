@@ -16,13 +16,17 @@
 
 ## exec client
 
-`docker exec -it truffle truffle develop`
+connect
 
-## compile contract
+`docker exec -it truffle truffle console`
 
-`docker exec -it truffle truffle compile`
+connect develop
 
-## migrate
+```
+docker exec -it truffle truffle console --network development
+```
+
+## setting truffle
 
 mod src/truffle-config.js
 
@@ -47,6 +51,19 @@ module.exports = {
   }
 };
 ```
+
+## confirm truffle
+
+```
+docker exec -it truffle truffle console
+truffle(development)> web3.eth.accounts
+```
+
+## compile contract
+
+`docker exec -it truffle truffle compile`
+
+## migrate
 
 `docker-compose run truffle migrate --network development`
 

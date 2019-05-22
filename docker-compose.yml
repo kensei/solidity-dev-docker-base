@@ -11,6 +11,9 @@ services:
     tty: true
     depends_on:
       - ganache
+    ports:
+      - 3000:3000
+      - 3001:3001
   ganache:
     build: ganache
     container_name: ganache
