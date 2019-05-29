@@ -12,7 +12,7 @@
 
 ## run test
 
-`docker exec -it truffle truffle test`
+`docker exec truffle truffle test`
 
 ## exec client
 
@@ -61,11 +61,17 @@ truffle(development)> web3.eth.accounts
 
 ## compile contract
 
-`docker exec -it truffle truffle compile`
+`docker exec truffle truffle compile`
 
 ## migrate
 
-`docker-compose run truffle migrate --network development`
+`docker exec truffle truffle migrate --network development`
+
+## deploy web app
+
+`docker exec truffle npm run dev`
+
+open browser http://localhost:3000
 
 ## notice
 
